@@ -1,5 +1,5 @@
 # Change these
-server '188.166.6.35', roles: [:web, :app, :db], primary: true
+server '188.166.6.35', port: 22, roles: [:web, :app, :db], primary: true
 
 set :repo_url,        'https://github.com/JohnSly/freshbox.git/'
 set :application,     'freshbox'
