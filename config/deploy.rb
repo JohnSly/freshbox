@@ -56,7 +56,7 @@ end
 #         exit
 #       end
 #     end
-#   end
+  end
 
   desc 'Initial Deploy'
   task :initial do
@@ -77,7 +77,7 @@ end
   after  :finishing,    :compile_assets
   after  :finishing,    :cleanup
   after  :finishing,    :restart
-# end
+end
 
 # ps aux | grep puma    # Get puma pid
 # kill -s SIGUSR2 pid   # Restart puma
