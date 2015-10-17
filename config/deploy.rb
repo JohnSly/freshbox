@@ -1,7 +1,7 @@
 # Change these
 server '188.166.6.35', port: 22, roles: [:web, :app, :db], primary: true
 
-set :repo_url,        'https://github.com/JohnSly/freshbox.git/'
+set :repo_url,        'git@github.com:JohnSly/freshbox.git'
 set :application,     'freshbox'
 set :user,            'deploy'
 set :puma_threads,    [4, 16]
@@ -46,17 +46,17 @@ namespace :puma do
   before :start, :make_dirs
 end
 
-# namespace :deploy do
-#   desc "Make sure local git is in sync with remote."
-#   task :check_revision do
-#     on roles(:app) do
-#       unless `git rev-parse HEAD` == `git rev-parse origin/master`
-#         puts "WARNING: HEAD is not the same as origin/master"
-#         puts "Run `git push` to sync changes."
-#         exit
-#       end
-#     end
-#   end
+namespace :deploy do
+  desc "Make sure local git is in sync with remote."
+  task :check_revision do
+    on roles(:app) do
+      unless `git rev-parse HEAD` == `git rev-parse origin/master`
+        puts "WARNING: HEAD is not the same as origin/master"
+        puts "Run `git push` to sync changes."
+        exit
+      end
+    end
+  end
 
   desc 'Initial Deploy'
   task :initial do
