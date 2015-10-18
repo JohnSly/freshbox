@@ -2,7 +2,6 @@
 server '188.166.6.35', port: 22, roles: [:web, :app, :db], primary: true
 
 set :repo_url,        'git@github.com:JohnSly/freshbox.git'
-set :branch,        :socialogin
 set :application,     'freshbox'
 set :user,            'deploy'
 set :puma_threads,    [4, 16]
