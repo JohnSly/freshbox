@@ -1,5 +1,4 @@
 # config valid only for current version of Capistrano
-require 'capistrano/local_precompile'
 lock '3.4.0'
 
 set :application, 'freshbox'
