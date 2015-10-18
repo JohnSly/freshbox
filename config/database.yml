@@ -26,4 +26,3 @@ test:
 production:
   <<: *default
   database: freshbox_production
-  url: 188.166.35.6
