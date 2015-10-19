@@ -10,7 +10,7 @@ default: &default
   pool: 5
   password: <%= ENV['FRESHBOX_DATABASE_PASSWORD'] %>
   username: freshbox
-  # host: localhost
+  host: localhost
 
 development:
   <<: *default
