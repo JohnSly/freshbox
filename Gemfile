@@ -45,7 +45,7 @@ end
 
 gem 'puma'
 group :development do
-  gem 'capistrano', require: false
+  gem 'capistrano', '~> 3.4'
   gem 'capistrano3-puma', require: false
   gem 'capistrano-rails', require: false
   gem 'capistrano-bundler', require: false
