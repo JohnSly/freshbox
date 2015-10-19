@@ -26,3 +26,4 @@ test:
 production:
   <<: *default
   database: freshbox_production
+  host: 54.75.96.237
