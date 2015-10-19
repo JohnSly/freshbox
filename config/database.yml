@@ -11,6 +11,7 @@ default: &default
   password: <%= ENV['FRESHBOX_DATABASE_PASSWORD'] %>
   username: freshbox
   host: localhost
+  port: 5432
 
 development:
   <<: *default
@@ -27,3 +28,4 @@ production:
   <<: *default
   database: freshbox_production
   host: 188.166.6.35
+  port: 5432
