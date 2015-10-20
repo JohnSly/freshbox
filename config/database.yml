@@ -27,5 +27,5 @@ test:
 production:
   <<: *default
   database: freshbox_production
-  host: 188.166.6.35
+  host: localhost
   port: 5432
