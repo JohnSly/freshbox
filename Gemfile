@@ -52,6 +52,7 @@ group :development do
 end
 
 gem 'puma'
+gem 'execjs'
 
 gem 'spree', '3.0.4'
 gem 'spree_gateway', github: 'spree/spree_gateway', branch: '3-0-stable'
