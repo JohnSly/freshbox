@@ -8,10 +8,9 @@ default: &default
   adapter: postgresql
   encoding: unicode
   pool: 5
-  password: <%= ENV['FRESHBOX_DATABASE_PASSWORD'] %>
+  password: freshbox
   username: freshbox
   host: localhost
-  port: 5432
 
 development:
   <<: *default
@@ -28,4 +27,3 @@ production:
   <<: *default
   database: freshbox_production
   host: localhost
-  port: 5432
