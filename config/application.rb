@@ -19,6 +19,10 @@ module Freshbox
       Dir.glob(File.join(File.dirname(__FILE__), "../app/overrides/*.rb")) do |c|
         Rails.configuration.cache_classes ? require(c) : load(c)
       end
+      # Load css
+      config.assets.precompile += [
+      'frontend_bootstrap.css.scss'
+    ]
     end
 
     # Settings in config/environments/* take precedence over those specified here.
