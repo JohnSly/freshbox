@@ -10,7 +10,6 @@
 # you'll amass, the slower it'll run and the greater likelihood for issues).
 #
 # It's strongly recommended that you check this file into your version control system.
-# added production db on rake db:setup
 
 ActiveRecord::Schema.define(version: 20151017104738) do
 
