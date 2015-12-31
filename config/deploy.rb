@@ -1,5 +1,5 @@
 # Change these
-server '188.166.6.35', port: 22, roles: [:web, :app, :db], primary: true
+server '178.62.192.158', port: 22, roles: [:web, :app, :db], primary: true
 
 set :repo_url,        'git@github.com:JohnSly/freshbox.git'
 set :application,     'freshbox'
@@ -11,6 +11,7 @@ set :puma_workers,    0
 set :pty,             true
 set :use_sudo,        false
 set :stage,           :production
+set :migration_role   :freshbox
 set :deploy_via,      :remote_cache
 set :deploy_to,       "/home/#{fetch(:user)}/apps/#{fetch(:application)}"
 set :puma_bind,       "unix://#{shared_path}/tmp/sockets/#{fetch(:application)}-puma.sock"
@@ -31,7 +32,7 @@ set :puma_init_active_record, true  # Change to false when not using ActiveRecor
 # set :keep_releases, 5
 
 ## Linked Files & Directories (Default None):
-# set :linked_files, %w{config/database.yml}
+set :linked_files, %w{config/database.yml config/secrets.yml}
 # set :linked_dirs,  %w{bin log tmp/pids tmp/cache tmp/sockets vendor/bundle public/system}
 
 namespace :puma do
