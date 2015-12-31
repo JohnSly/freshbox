@@ -1,8 +1,4 @@
 # Change these
-
-require "bundler/capistrano"
-load "deploy/assets"
-
 server '178.62.192.158', port: 22, roles: [:web, :app, :db], primary: true
 
 set :repo_url,        'git@github.com:JohnSly/freshbox.git'
