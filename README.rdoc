@@ -5,6 +5,8 @@ Things you may want to cover:
 
 * Ruby version 2.2.2
 
+* Gem spree rails engine 
+
 * System dependencies - check gemfile
 
 * Configuration
